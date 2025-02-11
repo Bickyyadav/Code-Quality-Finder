@@ -8,7 +8,7 @@ module.exports.getReview = async (req, res) => {
     }
 
     const response = await aiService(prompt);
-    console.log("AI Response:", response, "Type:", typeof response);
+    // console.log("AI Response:", response, "Type:", typeof response);
 
     if (!response) {
       return res.status(500).json({ error: "AI service returned an empty response" });
